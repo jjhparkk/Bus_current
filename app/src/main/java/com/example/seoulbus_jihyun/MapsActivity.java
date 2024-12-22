@@ -51,7 +51,7 @@ public class MapsActivity extends FragmentActivity {
 
             // 노선 버스 ID 추출을 위한 공공 DB API 호출
             String serviceUrl = "http://ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList";
-            String serviceKey = "Q%2BN0suvV11QncsEnp%2Fsr3g2m146qIwa%2BzAvc4sjR7m0ubZou1obc2aZ37pPDoETMOasipj4tL2mxcSCqaE2Hog%3D%3D";
+            String serviceKey = "키값";
             String strUrl = serviceUrl + "?ServiceKey=" + serviceKey + "&strSrch=" + busNumber;
 
             DownloadWebpageTask task = new DownloadWebpageTask();
@@ -125,11 +125,7 @@ public class MapsActivity extends FragmentActivity {
                     // Bus Position
                     if (!busRouteId.isEmpty()) {
                         String serviceUrl = "http://ws.bus.go.kr/api/rest/buspos/getBusPosByRtid";
-<<<<<<< HEAD
-                        String serviceKey = "Q%2BN0suvV11QncsEnp%2Fsr3g2m146qIwa%2BzAvc4sjR7m0ubZou1obc2aZ37pPDoETMOasipj4tL2mxcSCqaE2Hog%3D%3D\n";
-=======
                         String serviceKey = "키값";
->>>>>>> f6aad5b (Reinitialize and update project files)
                         String strUrl = serviceUrl + "?ServiceKey=" + serviceKey + "&busRouteId=" + busRouteId;
                         DownloadWebpageTask2 task2 = new DownloadWebpageTask2();
                         task2.execute(strUrl);
